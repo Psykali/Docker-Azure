@@ -4,8 +4,8 @@
 ## Simple script to automate the creation of FunctionApp-Azure.## 01.Create Ressource Group.   ##
 ## the package do most of the hard work,                       ## 02.Create Storage Account.   ##
 ## so this script can be small-ish and lazy-ish.               ## 03.Creation Function APP.    ##
-## V1.0.0 By S.KHALIFA 25/06/2022                              ## 04.Creation FunctionApp Slot.##
-## V1.0.1 By S.KHALIFA 28/06/2022                              ##                              ## 
+## V1.0.0 By S.KHALIFA 05/09/2022                              ## 04.Creation FunctionApp Slot.##
+## V1.0.2 By C.DE SOUSA MATHIEU 06/09/2022                              ##                              ## 
 #################################################################################################
 ############
 ## Colors ##
@@ -19,7 +19,7 @@ NC='\033[0m'              # No Color
 ###############################
 echo " Please Name the Group "
 read Ans01
-echo " Where you would like to create it ?! "
+echo " Where you would like to create it ?! Ex : westeurope "
 read Ans02
 az group create -l $Ans02 \
                 -n $Ans01 
@@ -28,20 +28,21 @@ if [ "$?" -eq "0" ]; then
   else
     echo -e  "%s\n" " ${BRed} Opps, Error 01.Create Ressource Group ${NC}"
   exit 1;
-fi###############################
+fi
+###############################
 ## 02.Create Storage Account ##
 ###############################
-#echo -e " Please name your Storage-account,${BYellow} PS!!:Storage account name must be between 3 and 24 characters in length and use numbers and lower-case letters >
-#read strgacc
-#az storage account create -n $strgacc \
-#                            -g $Ans01 \
-#                            --sku Standard_LRS 
-#if [ "$?" -eq "0" ]; then
-#    echo -e "${BGreen} 02.Create Storage Account Done, Launching 03.Creation Function APP ... ${NC}"
-#else
-#    echo -e  "%s\n" " ${BRed} Opps, Error 02.Create Storage Account ${NC}"
-#  exit 1;
-#fi
+echo -e " Please name your Storage-account,${BYellow} PS!!:Storage account name must be between 3 and 24 characters in length and use numbers and lower-case letters >
+read strgacc
+az storage account create -n $strgacc \
+                            -g $Ans01 \
+                            --sku Standard_LRS 
+if [ "$?" -eq "0" ]; then
+    echo -e "${BGreen} 02.Create Storage Account Done, Launching 03.Creation Function APP ... ${NC}"
+else
+    echo -e  "%s\n" " ${BRed} Opps, Error 02.Create Storage Account ${NC}"
+  exit 1;
+fi
 ##############################
 ## 03.Creation Function APP ##
 ##############################
