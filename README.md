@@ -23,6 +23,7 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 #### L'image de prod est ici https://hub.docker.com/repository/docker/psykali/stackoverp20kcab
 
 ### Voici l'archithecture réseau :
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,3 +35,4 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 <script type="text/javascript" src="https://app.diagrams.net/js/viewer-static.min.js"></script>
 </body>
 </html>
+```
