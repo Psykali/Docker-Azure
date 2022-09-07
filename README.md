@@ -23,4 +23,4 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 #### L'image de prod est ici https://hub.docker.com/repository/docker/psykali/stackoverp20kcab
 
 ### Voici l'archithecture réseau :
-[![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/diagramme.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/diagramme.png)
+[![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/diagrammebrief10.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/diagrammebrief10.png)
