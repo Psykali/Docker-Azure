@@ -23,7 +23,6 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 #### L'image de prod est ici https://hub.docker.com/repository/docker/psykali/stackoverp20kcab
 
 ### Voici l'archithecture réseau :
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
 <!DOCTYPE html>
 <html>
 <head>
