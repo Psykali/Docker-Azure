@@ -25,4 +25,5 @@ Vous allez finalisez les petites configurations comme lier l'image du conteneur 
 ### Voici l'archithecture réseau :
 [![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/g3b10AzetDockerKCAB.drawio.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/g3b10AzetDockerKCAB.drawio.png)
 
-### Voici le cout du projet 
+### Voici le cout du projet [![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/estimation%20du%20cout.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/estimation%20du%20cout.png)
+ 
