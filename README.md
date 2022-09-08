@@ -14,7 +14,7 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 
 ### Etape 3 Faire la fin des configurations sur le portail Azure.
 
-
+Vous allez finalisez les petites configurations qu'il manque au script.
 
 ### Etape 4 importer l'image du docker hub.
 
@@ -23,4 +23,4 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 #### L'image de prod est ici https://hub.docker.com/repository/docker/psykali/stackoverp20kcab
 
 ### Voici l'archithecture réseau :
-[![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/diagrammebrief10.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/diagrammebrief10.png)
+[![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/g3b10AzetDockerKCAB.drawio.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/g3b10AzetDockerKCAB.drawio.png)
