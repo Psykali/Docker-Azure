@@ -14,7 +14,7 @@ Une fois le script terminé vous avez votre groupe de ressource, votre compte st
 
 ### Etape 3 Faire la fin des configurations sur le portail Azure.
 
-Vous allez finalisez les petites configurations qu'il manque au script.
+Vous allez finalisez les petites configurations comme lier l'image du conteneur au webApp.
 
 ### Etape 4 importer l'image du docker hub.
 
@@ -24,3 +24,5 @@ Vous allez finalisez les petites configurations qu'il manque au script.
 
 ### Voici l'archithecture réseau :
 [![Alt text](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/g3b10AzetDockerKCAB.drawio.png)](https://github.com/Psykali/G3-B10-AZetDocker-KCAB/blob/main/g3b10AzetDockerKCAB.drawio.png)
+
+### Voici le cout du projet 

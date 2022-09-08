@@ -43,37 +43,26 @@ else
     echo -e  "%s\n" " ${BRed} Opps, Error 02.Create Storage Account ${NC}"
   exit 1;
 fi
-##############################
-## 03.Creation Function APP ##
-##############################
-echo -e " What you wanna run on this function-app ?! ${BYellow} Ex: dotnet-isolated ${NC} ${BRed}!!! RESPECT THE CASE !!!${NC} "
+##############################################
+## 03.Create an App Service plan in S1 tier ##
+##############################################
+# Create an App Service plan in S1 tier
+echo -e " Please Name the App Service plan?! ${BYellow} Ex: brief10groupe3 ${NC} ${BRed}!!! RESPECT THE CASE !!!${NC} "
 read Ans05
-echo -e " What is the function-app OS ?! ${BYellow} Ex: Linux or Windows !! ${NC} ${BRed}!!! RESPECT THE CASE !!!${NC} " 
-read Ans06
-az functionapp create -c $Ans02 \
-                        --os-type $Ans06 \
-                        -n $Ans01-fa \
-                        -g $Ans01 \
-                        -s $strgacc \
-                        --runtime $Ans05 
-                        if [ "$?" -eq "0" ]; then
-    echo -e " ${BGreen} 03.Creation Function APP Done; Launching 04.Creation FunctionApp Slot ... ${NC} "
-else
-    echo -e  "%s\n" " ${BRed} Opps, Error 04.Creation Function-app Slot ${NC}"
-  exit 1;
-fi 
-##################################
-## 04.Creation FunctionApp Slot ##
-##################################
-#echo -e " What you wanna call your slot ?! ${BYellow} Ex: staging ${NC} ${BRed}!!! RESPECT THE CASE !!!${NC} "
-#read Ansslot
-az functionapp deployment slot create -n $Ans01-fa -g $Ans01 --slot dev
-if [ "$?" -eq "0" ]; then
-    echo -e " ${BGreen} 04.Creation FunctionApp Slot Done ${NC} "
-else
-    echo -e  "%s\n" " ${BRed} Opps, Error 04.Creation Function-app Slot ${NC}"
-  exit 1;
-fi
+echo "Creating $Ans05"
+az appservice plan create --name $Ans05 --resource-group $Ans01 --sku T1v2 --is-linux
+######################################
+## 04.Create an Web App dev et prod ##
+######################################
+# Create a web app. To see list of available runtimes, run 'az webapp list-runtimes --linux'
+echo "Creating $webapp"
+az webapp create --name $webapp --resource-group $Ans01 --plan $Ans05  --runtime "NODE|14-lts"
+
+echo "Creating $webapp de dev"
+az webapp create --name $webapp+dev --resource-group $Ans01 --plan $Ans05  --runtime "NODE|14-lts"
+
+# pour lier l'image du container az webapp config container set --docker-custom-image-name $dockerHubContainerPath --name $webApp --resource-group $resourceGroup #
+
 #########
 ## End ##
 #########
